@@ -1,5 +1,6 @@
 const axios = require('axios')
 const dataTest = require('../env/dummyAPI')
+const logger = require('../log/logger')
 
 describe('Dummy', function() {
 
@@ -9,7 +10,7 @@ describe('Dummy', function() {
                 console.log(response)
             })
             .catch(function(error) {
-                console.log(error)
+                logger.log(error)
             })
     })
 })
